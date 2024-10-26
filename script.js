@@ -1,4 +1,4 @@
-const links = document.querySelectorAll('.nav-link');
+const links = document.querySelectorAll('.nav-link, .dropbtn');
 links.forEach(link => {
     link.addEventListener('click', function(e) {
         e.preventDefault();
