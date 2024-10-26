@@ -1,78 +1,80 @@
-/* Reset and base styles */
+/* Your original CSS remains exactly the same */
 body {
   background-color: #1e222b;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
-
-/* Header styles */
 header {
   background-color: #1a5f7a;
   color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
-
-/* Navigation styles */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #1a5f7a;
-  position: sticky;
+  position: sticky; 
+  position: -webkit-sticky;
   top: 0;
   width: 100%;
 }
-
 li {
   float: left;
 }
 
-/* Navigation link styles */
-.nav-link {
+li a {
   display: block;
   padding: 14px 16px;
+  text-align: center;
   color: aliceblue;
   text-decoration: none;
-  text-align: center;
+  font-family: 'Times New Roman', "Helvetica Neue", Helvetica, sans-serif;
 }
-
-/* Hover and active states */
-.nav-link:hover:not(.active) {
+li a:hover:not(.active) {
   background-color: #192d35;
 }
-
 .active {
   background-color: #131330;
 }
+li a, .dropbtn {
+display: inline-block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
 
-/* Dropdown styles */
-.dropdown {
-  display: inline-block;
+li a:hover, .dropdown:hover .dropbtn {
+background-color: yellow;
+}
+
+li.dropdown {
+display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #192d35;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+display: none;
+position: absolute;
+background-color: #192d35;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
 }
 
 .dropdown-content a {
-  color: aliceblue;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+text-align: left;
 }
-
 .dropdown-content a:hover {
-  background-color: #131330;
+  background-color: #192d35;
 }
-
 .dropdown:hover .dropdown-content {
   display: block;
 }

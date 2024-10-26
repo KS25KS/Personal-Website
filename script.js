@@ -1,20 +1,22 @@
-// Select all navigation links including dropdown button
-const navLinks = document.querySelectorAll('.nav-link');
+const links = document.querySelectorAll('.nav-link');
+const dropBtn = document.querySelector('.dropbtn');
 
-// Add click event listener to each navigation link
-navLinks.forEach(link => {
+// Handle regular navigation links
+links.forEach(link => {
     link.addEventListener('click', function(e) {
-        // Only prevent default for non-dropdown links
-        if (!this.classList.contains('dropbtn')) {
-            e.preventDefault();
-        }
-        
-        // Remove active class from all links
-        navLinks.forEach(l => l.classList.remove('active'));
-        
-        // Add active class to clicked link if it's not a dropdown button
-        if (!this.classList.contains('dropbtn')) {
-            this.classList.add('active');
-        }
+        e.preventDefault();
+        // Remove 'active' class from all links
+        links.forEach(l => l.classList.remove('active'));
+        // Add 'active' class to the clicked link
+        this.classList.add('active');
     });
 });
+
+// Handle dropdown button separately
+if (dropBtn) {
+    dropBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Remove 'active' class from all links
+        links.forEach(l => l.classList.remove('active'));
+    });
+}
