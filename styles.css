@@ -1,80 +1,130 @@
-/* Your original CSS remains exactly the same */
+/* Base styles */
 body {
-  background-color: #1e222b;
+  background-color: #ffffff;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
 }
+
+/* Header styles */
 header {
   background-color: #1a5f7a;
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
+  padding: 1rem;
 }
+
+/* Navigation base styles */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   background-color: #1a5f7a;
-  position: sticky; 
-  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   width: 100%;
-}
-li {
-  float: left;
+  z-index: 1000;
 }
 
+/* Navigation items */
+li {
+  float: left;
+  position: relative;  /* Added for dropdown positioning */
+}
+
+/* Navigation links */
 li a {
   display: block;
-  padding: 14px 16px;
-  text-align: center;
   color: aliceblue;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
   font-family: 'Times New Roman', "Helvetica Neue", Helvetica, sans-serif;
+  transition: background-color 0.3s ease;  /* Smooth hover effect */
 }
+
+/* Active and hover states for regular links */
 li a:hover:not(.active) {
   background-color: #192d35;
 }
+
 .active {
   background-color: #131330;
 }
-li a, .dropbtn {
-display: inline-block;
-color: white;
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
+
+/* Dropdown specific styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-li a:hover, .dropdown:hover .dropbtn {
-background-color: yellow;
+/* Dropdown button */
+.dropdown .nav-link {
+  padding-right: 25px;  /* Space for dropdown indicator */
 }
 
-li.dropdown {
-display: inline-block;
+/* Dropdown arrow indicator */
+.dropdown .nav-link::after {
+  content: '▼';
+  font-size: 0.7em;
+  margin-left: 5px;
+  vertical-align: middle;
 }
 
+/* Dropdown content container */
 .dropdown-content {
-display: none;
-position: absolute;
-background-color: #192d35;
-min-width: 160px;
-box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-z-index: 1;
+  display: none;
+  position: absolute;
+  top: 100%;  /* Position below parent */
+  left: 0;
+  background-color: #192d35;
+  min-width: 200px;
+  box-shadow: 0 8px 16px #00000033;
+  z-index: 1;
+  border-radius: 0 0 4px 4px;
 }
 
+/* Dropdown links */
 .dropdown-content a {
-color: black;
-padding: 12px 16px;
-text-decoration: none;
-display: block;
-text-align: left;
+  color: aliceblue;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 0.95em;
 }
+
+/* Hover states for dropdown links */
 .dropdown-content a:hover {
-  background-color: #192d35;
+  background-color: #131330;
 }
+
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+/* Active states */
+.dropdown:hover > .nav-link,
+.nav-link:hover {
+  background-color: #192d35;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 600px) {
+  li {
+      float: none;
+  }
+  
+  .dropdown-content {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+  }
+  
+  .dropdown-content a {
+      padding-left: 30px;
+  }
 }
