@@ -17,7 +17,8 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #1a5f7a;
-    position: fixed;
+    position: sticky; 
+    position: -webkit-sticky;
     top: 0;
     width: 100%;
       
@@ -25,6 +26,7 @@ ul {
 li {
     float: left;
 }
+
 li a {
     display: block;
     padding: 14px 16px;
@@ -38,4 +40,42 @@ li a:hover:not(.active) {
 }
 .active {
     background-color: #131330;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: yellow;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #192d35;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #192d35;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
 }
