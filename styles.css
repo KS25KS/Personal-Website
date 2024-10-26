@@ -1,41 +1,70 @@
+:root {
+    --primary-color: #1a5f7a;
+    --secondary-color: #192d35;
+    --background-color: #1e222b;
+    --active-color: #131330;
+    --text-color: aliceblue;
+}
 
 body {
-    background-color: #1e222b;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
-header {
-    background-color: #1a5f7a;
-    color: aliceblue;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #1a5f7a;
+
+.navbar {
+    background-color: var(--primary-color);
     position: fixed;
     top: 0;
     width: 100%;
-      
+    z-index: 1000;
 }
-li {
-    float: left;
+
+.nav-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
 }
-li a {
+
+.nav-list li {
+    margin: 0;
+}
+
+.nav-link {
     display: block;
-    padding: 14px 16px;
-    text-align: center;
-    color: aliceblue;
+    padding: 1rem;
+    color: var(--text-color);
     text-decoration: none;
-    font-family: 'Times New Roman', "Helvetica Neue", Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    transition: background-color 0.3s ease;
 }
-li a:hover:not(.active) {
-    background-color: #192d35;
+
+.nav-link:hover:not(.active) {
+    background-color: var(--secondary-color);
 }
+
 .active {
-    background-color: #131330;
+    background-color: var(--active-color);
+}
+
+main {
+    padding: 5rem 1rem 1rem;
+    color: var(--text-color);
+}
+
+@media (max-width: 600px) {
+    .nav-list {
+        flex-direction: column;
+    }
+    
+    .nav-list li {
+        width: 100%;
+    }
+    
+    .nav-link {
+        text-align: center;
+    }
 }
