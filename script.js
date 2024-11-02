@@ -25,3 +25,24 @@ dropdownLinks.forEach(link => {
         link.classList.add('active');
     }
 });
+
+// Glitch effect for header text
+const glitchText = document.querySelector('.glitch');
+let glitchInterval;
+
+function startGlitchEffect() {
+    glitchInterval = setInterval(() => {
+        glitchText.style.transform = 'translate(${Math.random() * 10 - 5}px, ${Math.random() * 5 - 2.5}px)';
+        setTimeout(() => {
+            glitchText.style.transform = 'translate(0, 0)';
+        }. 50);
+    }, 3000);
+}
+
+function stopGlitchEffect() {
+    clearInterval(glitchInterval);
+    glitchText.style.transform = 'translate(0, 0)';
+}
+
+glitchText.addEventListener('mouseenter', startGlitchEffect);
+glitchText.addEventListener('mouseenter', stopGlitchEffect);

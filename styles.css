@@ -81,3 +81,125 @@ li.dropdown {
 .active.dropbtn {
     background-color: #131330;
 }
+h1 {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-family: sans-serif, Arial, Helvetica;
+  color: aliceblue;
+}
+h3 {
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  font-family: sans-serif, Arial, Helvetica;
+  color: aliceblue;
+}
+.glitch {
+  position: relative;
+}
+.glitch::before,
+.glitch::after {
+  content:attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 #fa69ee;
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim 5s infinite linear alternate-reverse;
+}
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 #0bf7ff, 2px 2px #fa69ee;
+  animation: glitch-anim2 1s infinite linear alternate-reverse;
+}
+@keyframes glitch-anim {
+  0% {
+      clip: rect(31px, 9999px, 94px, 0);
+  }
+  4.166666667% {
+      clip: rect(91px, 9999px, 43px, 0);
+  }
+  8.333333333% {
+      clip: rect(15px, 9999px, 13px, 0);
+  }
+  12.5% {
+      clip: rect(75px, 9999px, 57px, 0);
+  }
+  16.66666667% {
+      clip: rect(83px, 9999px, 66px, 0);
+  }
+  20.83333333% {
+      clip: rect(46px, 9999px, 14px, 0);
+  }
+  25% {
+      clip: rect(50px, 9999px, 78px, 0);
+  }
+  29.16666667% {
+      clip: rect(26px, 9999px, 87px, 0);
+  }
+  33.33333333% {
+      clip: rect(60px, 9999px, 28px, 0);
+  }
+  37.5% {
+      clip: rect(55px, 9999px, 68px, 0);
+  }
+  41.66666667% {
+      clip: rect(75px, 9999px, 86px, 0);
+  }
+  45.83333333% {
+      clip: rect(54px, 9999px, 91px, 0);
+  }
+  50% {
+      clip: rect(69px, 9999px, 41px, 0);
+  }
+  54.16666667% {
+      clip: rect(23px, 9999px, 88px, 0);
+  }
+  58.33333333% {
+      clip: rect(42px, 9999px, 51px, 0);
+  }
+  62.5% {
+      clip: rect(46px, 9999px, 76px, 0);
+  }
+  66.66666667% {
+      clip: rect(64px, 9999px, 57px, 0);
+  }
+  70.83333333% {
+      clip: rect(96px, 9999px, 58px, 0);
+  }
+  75% {
+      clip: rect(13px, 9999px, 23px, 0);
+  }
+  79.16666667% {
+      clip: rect(69px, 9999px, 54px, 0);
+  }
+  83.33333333% {
+      clip: rect(45px, 9999px, 92px, 0);
+  }
+  87.5% {
+      clip: rect(67px, 9999px, 37px, 0);
+  }
+  91.66666667% {
+      clip: rect(83px, 9999px, 7px, 0);
+  }
+  95.83333333% {
+      clip: rect(34px, 9999px, 15px, 0);
+  }
+  100% {
+      clip: rect(67px, 9999px, 86px, 0);
+  }
+}
+@keyframes glitch-anim2 {
+  0% {
+    clip: rect(65px, 9999px, 91px, 0);
+  }
+  100% {
+    clip: rect(82px, 9999px, 64px, 0);
+  }
+}
