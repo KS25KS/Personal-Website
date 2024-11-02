@@ -35,7 +35,7 @@ function startGlitchEffect() {
         glitchText.style.transform = 'translate(${Math.random() * 10 - 5}px, ${Math.random() * 5 - 2.5}px)';
         setTimeout(() => {
             glitchText.style.transform = 'translate(0, 0)';
-        }. 50);
+        }, 50);
     }, 3000);
 }
 
