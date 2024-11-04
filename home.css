@@ -2,13 +2,45 @@
     text-align: center;
     display: inline-block;
     padding: 1rem 2rem;
+    margin-top: 2rem;
     background: #1a5f7a;
     color: white;
     text-decoration: none;
     border-radius: 100px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: all background 0.3s;
 }
 
 .cta-button:hover {
     background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #014792;
 }
+
+/*.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: -1;
+}
+
+#player {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}*/
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 2rem;
+}
+
