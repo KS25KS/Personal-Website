@@ -1,3 +1,54 @@
+/* Hero Section Base */
+#home.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Video Overlay */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+/* YouTube Player Container */
+#player {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Hero Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 2rem;
+    color: white;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Container within Hero Content */
+.hero-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* CTA Button Styling */
 .cta-button {
     text-align: center;
     display: inline-block;
@@ -8,39 +59,30 @@
     text-decoration: none;
     border-radius: 100px;
     font-weight: bold;
-    transition: all background 0.3s;
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
     background: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px #014792;
+    box-shadow: 0 5px 15px rgba(1, 71, 146, 0.4);
 }
 
-/*.video-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: black;
-    z-index: -1;
+/* Mobile Optimization */
+@media screen and (max-width: 768px) {
+    .hero-content {
+        padding: 1rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.6rem;
+        margin-top: 1.5rem;
+    }
 }
 
-#player {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}*/
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 2rem;
+/* Ensure content remains visible */
+.hero-content h1,
+.hero-content h3 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0 0 1rem 0;
 }
-
