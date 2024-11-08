@@ -43,4 +43,35 @@
     text-align: center;
     padding: 0 2rem;
 }
-
+.section {
+    padding: 100px 0;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-family: sans-serif;
+}
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+.project {
+    background-color: #ffffff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px #0000001a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px  #00000033;
+}
+.project-image {
+    height: 200px;
+    background-color: aliceblue;
+    background-size: cover;
+    background-position: center;
+}
