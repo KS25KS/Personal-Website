@@ -65,7 +65,7 @@
 .cta-button:hover {
     background: #0056b3;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(1, 71, 146, 0.4);
+    box-shadow: 0 5px 15px #014792;
 }
 
 /* Mobile Optimization */
