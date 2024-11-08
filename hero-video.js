@@ -9,7 +9,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: 'joiyb6c_Ry4', // Replace with your YouTube video ID
+        videoId: '-7mtTskaHTE', // Replace with your YouTube video ID
         playerVars: {
             autoplay: 1,
             loop: 1,
@@ -18,7 +18,7 @@ function onYouTubeIframeAPIReady() {
             autohide: 1,
             modestbranding: 1,
             mute: 1,
-            playlist: 'joiyb6c_Ry4', // Required for looping
+            playlist: '-7mtTskaHTE', // Required for looping
             playsinline: 1,
             rel: 0
         },
