@@ -203,3 +203,6 @@ h3 {
     clip: rect(82px, 9999px, 64px, 0);
   }
 }
+html {
+    scroll-behavior: smooth;
+}
