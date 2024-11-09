@@ -1,0 +1,178 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: aliceblue;
+}
+
+/* Hero section*/
+.about-hero {
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #1a5f7a;
+    box-shadow: 0 0 20px #1a5f7a66;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* About Content Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.about-section {
+    background: rgba(26, 95, 122, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-5px);
+}
+
+.about-section h2 {
+    color: #1a5f7a;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Interests Grid */
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.interest-item {
+    padding: 1rem;
+    background: rgba(26, 95, 122, 0.2);
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.interest-item:hover {
+    background: rgba(26, 95, 122, 0.3);
+}
+
+.interest-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.skill-label {
+    font-weight: bold;
+}
+
+.skill-bar {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: #1a5f7a;
+    border-radius: 5px;
+    transition: width 1s ease;
+}
+
+/* CTA Section */
+.cta-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: rgba(26, 95, 122, 0.1);
+    border-radius: 15px;
+    margin-top: 4rem;
+}
+
+.cta-section h2 {
+    margin-bottom: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .interests-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .profile-image {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Animation for skill bars */
+@keyframes skillFill {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.skill-level {
+    animation: skillFill 1.5s ease-out forwards;
+}
+
+/* CTA Button Styling */
+.cta-button {
+    text-align: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background: #1a5f7a;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #014792;
+}
