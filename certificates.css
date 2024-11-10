@@ -1,0 +1,45 @@
+.certificates-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: aliceblue;
+}
+
+.certificates-header {
+    text-align: center;
+    padding: 3rem 0;
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.certificates-header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #1a5f7a, transparent);
+}
+
+.certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 4rem 0;
+}
+
+.certificates-section {
+    background: rgba(26, 95, 122, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certificate-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
