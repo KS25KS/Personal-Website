@@ -1,45 +1,68 @@
 .certificates-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    color: aliceblue;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: aliceblue;
 }
 
 .certificates-header {
-    text-align: center;
-    padding: 3rem 0;
-    position: relative;
-    margin-bottom: 4rem;
+  text-align: center;
+  padding: 3rem 0;
+  position: relative;
+  margin-bottom: 4rem;
 }
 
 .certificates-header::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #1a5f7a, transparent);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #1a5f7a, transparent);
 }
 
 .certificates-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 0;
 }
 
 .certificates-section {
-    background: rgba(26, 95, 122, 0.1);
-    border-radius: 15px;
-    padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+  background: rgba(26, 95, 122, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.certificate-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.certificate-image {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+}
+
+
+/* CTA Button Styling */
+.project-link {
+    text-align: center;
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    background: #1a5f7a;
+    color: white;
+    text-decoration: none;
+    border-radius: 100px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px #014792;
 }
