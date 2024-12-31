@@ -348,3 +348,76 @@ h3 {
 html {
     scroll-behavior: smooth;
 }
+
+.footer {
+    position: bottom;
+    left: 0;
+    bottom: 0;
+    background-color: #1a5f7a4d;
+    color: white;
+    text-align: center;
+    width: 100%;
+    height: 150px; /* Adjust height as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.footer h2, .footer h3 {
+    margin: 5px 0;
+}
+
+.footer .socials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer .icon-container {
+    display: flex;
+    gap: 10px;
+}
+
+.footer .btn-social {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: normal;
+    border: 2px solid #fcf9f9;
+    border-radius: 50%;
+    transition: .3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.footer .btn-social:hover {
+    color: #0056b3;
+    border-color: #0056b3;
+}
+
+.footer .btn-link {
+    margin-bottom: 5px;
+    color: #8a0404;
+    font-size: 15px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.footer .btn-link::before {
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .btn-link:hover {
+    letter-spacing: 1px;
+    box-shadow: none;
+}
