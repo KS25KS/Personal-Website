@@ -32,7 +32,8 @@ li a {
     text-align: center;
     color: aliceblue;
     text-decoration: none;
-    font-family: 'Times New Roman', "Helvetica Neue", Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif, Arial,'Times New Roman';
+    font-weight: bold;
 }
 li a:hover:not(.active) {
     background-color: #192d35;
