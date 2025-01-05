@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="contact.html">
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="mobile.css">
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -74,18 +75,26 @@
 
 </head> 
 <body>
-    <ul>
+
+  <nav class="navbar">
+    <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+     <ul class="nav-menu" style="z-index: 1000;">
         <li><a href="index.html" class="nav-link">Home</a></li>
         <li><a href="contact.html" class="nav-link">Kontakt</a></li>
         <li style="float:right"><a href="about.html" class="nav-link">Über mich</a></li>
         <li class="dropdown">
             <a href="javascript:void(0)" class="dropbtn">Berufserfahrung</a>
-            <div class="dropdown-content">
+            <div class="dropdown-content" style="z-index: 1000;">
                 <a href="absolved-sl.html">Absolvierte Schnupperlehren</a>
                 <a href="certificates.html">Zertifikate</a>
             </div>
         </li>
     </ul>
+  </nav>
     <section class="hero" id="home">
         <div class="video-overlay"></div>
         <div id="player"></div>
@@ -138,7 +147,7 @@
         </main>
 
     </div>
-
+    
     <script src="hero-video.js"></script>
     <script src="script.js"></script>
 </body>
