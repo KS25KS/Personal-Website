@@ -125,7 +125,7 @@ li a:hover, .dropdown-content a:hover {
 
     .mobile-arrow {
         display: inline-block;
-        float: right;
+        float: none;
         transition: transform 0.3s ease;
     }
 
@@ -143,7 +143,7 @@ li a:hover, .dropdown-content a:hover {
         display: none;
     }
 
-    .desktop-right {
-        float: right;
-    }
+.desktop-right {
+    display: inline-block;
+}
 }
