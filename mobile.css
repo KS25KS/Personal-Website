@@ -51,7 +51,7 @@ li a:hover, .dropdown-content a:hover {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
     .hamburger {
         display: block;
         cursor: pointer;
@@ -138,7 +138,7 @@ li a:hover, .dropdown-content a:hover {
     }
 }
 
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 845px) {
     .hamburger {
         display: none;
     }
